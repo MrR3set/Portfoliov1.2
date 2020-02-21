@@ -154,10 +154,15 @@
             text-align: center;
             .title(white,8rem);
             margin-bottom: 3%;
+            @media @tablet{
+                font-size: 7rem;
+            }
+            @media @tablet{
+                font-size: 5.5rem;
+            }
         }
         .skill{
             background: linear-gradient(45deg, rgba(86, 86, 86,0.04) 0%, rgba(86, 86, 86,0.04) 50%,rgba(169, 169, 169,0.04) 50%, rgba(169, 169, 169,0.04) 71%,rgba(251, 251, 251,0.04) 71%, rgba(251, 251, 251,0.04) 100%),linear-gradient(45deg, rgba(86, 86, 86,0.04) 0%, rgba(86, 86, 86,0.04) 56%,rgba(169, 169, 169,0.04) 56%, rgba(169, 169, 169,0.04) 67%,rgba(251, 251, 251,0.04) 67%, rgba(251, 251, 251,0.04) 100%),linear-gradient(135deg, rgba(86, 86, 86,0.04) 0%, rgba(86, 86, 86,0.04) 4%,rgba(169, 169, 169,0.04) 4%, rgba(169, 169, 169,0.04) 75%,rgba(251, 251, 251,0.04) 75%, rgba(251, 251, 251,0.04) 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
-
             padding: 1%;
             width: 24%;
             height: 60vh;
@@ -243,6 +248,9 @@
                 .title(white,3rem);
                 text-align: left;
                 margin-bottom: 3%;
+                @media @tablet2{
+                    font-size: 2.5rem;
+                }
             }
             a{
                 .link(@button-color)
@@ -252,6 +260,9 @@
                 font-size: 2rem;
                 line-height: 3rem;
                 margin-bottom: 6%;
+                @media @tablet2{
+                    font-size: 1.5rem;
+                }
             }
         }
         .img-wrapper{
@@ -289,6 +300,14 @@
                 transition: all 0.8s ease-in-out;
                 &:hover{
                     transform: scale(1.2);
+                }
+                @media @tablet{
+                    height: 100px;
+                    width: 100px;
+                }
+                @media @phone{
+                    height: 80px;
+                    width: 80px;
                 }
             }
         }

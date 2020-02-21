@@ -296,34 +296,46 @@ body {
   flex-direction: column;
   color: white;
 }
-#work .mostRecent h1 {
-  font-size: 7rem;
-  color: white;
-  text-transform: uppercase;
-}
-@media (max-width: 1100px) {
-  #work .mostRecent h1 {
-    font-size: calc(7rem - 2);
-  }
-}
 #work .moreWork h1 {
   font-size: 7rem;
   color: white;
   text-transform: uppercase;
+  text-align: center;
 }
 @media (max-width: 1100px) {
   #work .moreWork h1 {
     font-size: calc(7rem - 2);
   }
 }
+@media (max-width: 1100px) {
+  #work .moreWork h1 {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 900px) {
+  #work .moreWork h1 {
+    font-size: 5rem;
+  }
+}
+@media (max-width: 750px) {
+  #work .moreWork h1 {
+    font-size: 4rem;
+  }
+}
 #work .moreWork .archive {
-  width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
   margin-bottom: 6%;
 }
 #work .moreWork .archive a {
   color: #183699;
-  text-align: center;
   font-size: 2rem;
+}
+@media (max-width: 750px) {
+  #work .moreWork .archive a {
+    font-size: 1.5rem;
+  }
 }
 #work .moreWork .wGrid {
   display: flex;
@@ -339,7 +351,7 @@ body {
 #work .moreWork .wGrid .proj {
   width: 48%;
   height: 30vh;
-  padding: 1% 1%;
+  padding: 3% 1%;
   margin: 1%;
   display: flex;
   flex-direction: column;
@@ -359,6 +371,11 @@ body {
     font-size: calc(3rem - 2);
   }
 }
+@media (max-width: 750px) {
+  #work .moreWork .wGrid .proj h1 {
+    font-size: 2.5rem;
+  }
+}
 #work .moreWork .wGrid .proj P {
   font-size: 2rem;
   color: white;
@@ -369,7 +386,17 @@ body {
     font-size: calc(2rem - 2);
   }
 }
-#work .moreWork .wGrid .proj button {
+@media (max-width: 750px) {
+  #work .moreWork .wGrid .proj P {
+    font-size: 1.5rem;
+  }
+}
+#work .moreWork .wGrid .proj div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#work .moreWork .wGrid .proj div button {
   background-color: crimson;
   color: white;
   border: none;
@@ -378,7 +405,7 @@ body {
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-in-out;
 }
-#work .moreWork .wGrid .proj button:hover {
+#work .moreWork .wGrid .proj div button:hover {
   cursor: pointer;
   background-color: #9c0e2b;
 }

@@ -1,0 +1,52 @@
+//Colors
+@p-fontcolor:white;
+@s-fontcolor:red;
+@button-color:crimson;
+@button-color-hover:rgb(156, 14, 43);
+
+//Mixins
+
+.flex(@justify,@align){
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.link(@color:@s-fontcolor){
+    text-decoration: none;
+    color: @color;
+}
+
+.button(@bgcolor:@button-color, @color:white){
+    background-color: @bgcolor;
+    color: @color;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        background-color: @button-color-hover;
+    }
+}
+
+.title(@color, @fsize){
+    font-size: @fsize;
+    color: @color;
+    text-transform: uppercase;
+    @media @tablet {
+        font-size: calc(@fsize - 2);
+    }
+}
+
+.subTitle(@color){
+    color: @color;
+    font-size: 3rem;
+    width: 50%;
+    text-align: center;
+}
+
+
+@tablet: ~"(max-width: 1100px)";
+@phone: ~"(max-width: 750px)";

@@ -1,0 +1,104 @@
+// General Styles
+* {
+    box-sizing: border-box;
+    }
+    
+    html {
+    font-size: 62.5%;
+    }
+    
+    html, body {
+        // background-color: #262626;
+        background: radial-gradient(circle at 16% 83%, rgba(148, 148, 148,0.06) 0%, rgba(148, 148, 148,0.06) 50%,rgba(63, 63, 63,0.06) 50%, rgba(63, 63, 63,0.06) 100%),radial-gradient(circle at 68% 87%, rgba(66, 66, 66,0.06) 0%, rgba(66, 66, 66,0.06) 50%,rgba(105, 105, 105,0.06) 50%, rgba(105, 105, 105,0.06) 100%),radial-gradient(circle at 38% 50%, rgba(123, 123, 123,0.06) 0%, rgba(123, 123, 123,0.06) 50%,rgba(172, 172, 172,0.06) 50%, rgba(172, 172, 172,0.06) 100%),linear-gradient(90deg, hsl(18,0%,1%),hsl(18,0%,1%));
+    }
+    
+    h1, h2, h3, h4, h5 {
+    
+    }
+    
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        @media @phone{
+            width: 95%;
+        }
+    }
+    
+    //Navigation styling
+    .navBar{
+        width: 100%;
+        padding: 1% 0;
+        background-color: #262626;
+    }//Nav styling
+    
+    .navCont{
+        .flex(space-between, center);
+        @media @tablet{
+            flex-direction: column;
+        }
+    
+        a{
+            .link(@p-fontcolor);
+            h1{
+                font-size: 3rem;
+            }
+        }
+    
+        .logo{
+            .flex(center,center);
+            flex-direction: column;
+            color: @p-fontcolor;
+        }
+    
+        .navList{
+            width: 40%;
+            @media @tablet{
+                display: none;
+            }
+            .flex(space-between,center);
+            align-items: center;
+            .navElement a{
+                .link(@p-fontcolor);
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                .btn{
+                    .button();
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+    
+    
+.mobileNav{
+    position: fixed;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    font-size: 3rem;
+    color: white;
+    background-color: #0e0e0e;
+    padding: 1%;
+    z-index: 99;
+
+    display: none;
+    @media @tablet{
+        display: block;
+    }
+
+
+
+    .navList{
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        a{
+            .link(white)
+        }
+    }
+}
+    
+    
+    
+    

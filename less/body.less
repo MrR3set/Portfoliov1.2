@@ -1,0 +1,283 @@
+#home{
+    margin-top: 6%;
+   .textContent{
+       width: 45%;
+        h1,h2,h3{
+            .title(@p-fontcolor, 2rem);
+            letter-spacing: 0;
+            line-height: 8rem;
+        }
+        h2,h3{
+            font-size: 8rem;
+        }
+        h3{
+            text-align: right;
+            color: @button-color;
+        }
+        @media @tablet{
+            width: 80%;
+        }
+        @media @phone{
+            width: 90%;
+        }
+
+    }
+    
+    button{
+        .button(@button-color, white);
+        margin-top: 3%;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+    }
+}
+
+#work{ 
+    margin-top: 6%;
+    .flex(space-between,center);
+    flex-direction: column;
+    color: white;
+
+    .mostRecent{
+        h1{
+            .title(white,7rem)
+        }
+    }
+    .moreWork{
+        h1{
+            .title(white,7rem);
+        }
+        .archive{
+            width: 100%;
+            margin-bottom: 6%;
+            a{
+                color: rgb(24, 54, 153);
+                text-align: center;
+                font-size: 2rem;
+            }
+        }
+        .wGrid{
+            .flex(space-between,center);
+            flex-wrap: wrap;
+            @media @tablet{
+                justify-content: center;
+            }
+            .proj{
+                width: 48%;
+                height: 30vh;
+                padding: 1% 1%;
+                margin: 1%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: center;
+                text-align: center;
+                background-color: rgb(80, 101, 156);
+                transition: all 0.5s ease-in-out;
+                h1{
+                    .title(white,3rem)
+                }
+                P{
+                    .title(white,2rem)
+                }
+                button{
+                    .button(@button-color,white)
+                }
+                
+                &.proj1{
+                    background: url("../assets/Portfolio.PNG");
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.proj2{
+                    background: url("../assets/github.PNG");
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.proj3{
+                    background: url("../assets/SubredditFinder.PNG");
+                    background-size: cover;
+                    background-position: center;
+                }
+                &.proj4{
+                    background: url("../assets/nasa.PNG");
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+                @media @tablet{
+                    width: 75%;
+                }
+                @media @phone{
+                    width: 90%;
+                }
+
+            }
+
+
+
+
+        }
+    }
+}
+
+
+#skills{
+    margin-top: 6%;
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        h1{
+            width: 100%;
+            text-align: center;
+            .title(white,8rem);
+            margin-bottom: 3%;
+        }
+        .skill{
+            background: linear-gradient(45deg, rgba(86, 86, 86,0.04) 0%, rgba(86, 86, 86,0.04) 50%,rgba(169, 169, 169,0.04) 50%, rgba(169, 169, 169,0.04) 71%,rgba(251, 251, 251,0.04) 71%, rgba(251, 251, 251,0.04) 100%),linear-gradient(45deg, rgba(86, 86, 86,0.04) 0%, rgba(86, 86, 86,0.04) 56%,rgba(169, 169, 169,0.04) 56%, rgba(169, 169, 169,0.04) 67%,rgba(251, 251, 251,0.04) 67%, rgba(251, 251, 251,0.04) 100%),linear-gradient(135deg, rgba(86, 86, 86,0.04) 0%, rgba(86, 86, 86,0.04) 4%,rgba(169, 169, 169,0.04) 4%, rgba(169, 169, 169,0.04) 75%,rgba(251, 251, 251,0.04) 75%, rgba(251, 251, 251,0.04) 100%),linear-gradient(90deg, rgb(0,0,0),rgb(0,0,0));
+
+            padding: 1%;
+            width: 24%;
+            height: 60vh;
+            margin-bottom: 3%;
+            border-radius: 5%;
+
+            display: grid;
+            grid-template-rows: 40% 55% 5%;
+            grid-template-columns: 100%;
+            grid-template-areas: "title" "src" "time";
+            text-align: center;
+            font-size: 3rem;
+            color: white;
+            transition: all 0.5s ease-in-out;
+            @media @tablet{
+                width: 32%;
+                height: 50vh;
+            }           
+            
+            @media @phone{
+                width: 45%;
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+
+            .title{
+                grid-area: title;
+                .flex(center,center);
+                flex-direction: column;
+                .fa{
+                    font-size: 8rem;
+                    
+                }
+                .svg{
+                    height: 8rem;
+                    color: white;
+                    filter: brightness(0) invert(1);
+                }
+                h1{
+                    margin-top: 6%;
+                    .title(white,2rem)
+                }
+            }
+
+            .time{
+                border-top: 1px solid gray;
+                grid-area: time;
+                font-size: 1.5rem;
+                text-align: left;
+                .flex(end,center);
+            }
+
+            .src{
+                margin-top: 2%;
+                grid-area: src;
+                text-align: center;
+                
+                div{
+                    margin-top: 2rem;
+                    text-align: left;
+                    font-size: 2rem;
+                    ul{
+                        margin-bottom: 5%;
+                    }
+                }
+            }
+
+        }
+    }
+    .aboutMe{
+        margin-top: 6%;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: "img content";
+
+        .text-content{
+            grid-area: content;
+            padding: 3%;
+            h1{
+                .title(white,3rem);
+                text-align: left;
+                margin-bottom: 3%;
+            }
+            a{
+                .link(@button-color)
+            }
+            p{ 
+                color: white;
+                font-size: 2rem;
+                line-height: 3rem;
+                margin-bottom: 6%;
+            }
+        }
+        .img-wrapper{
+            grid-area: img;
+            padding-top: 15%;
+            img{
+                grid-area: img;
+                border-radius: 50%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+#contact{
+    margin: 6% 0;
+    h1{
+        .title(white,3rem);
+        text-align: center;
+        margin: 2%;
+    }
+    .socials{
+        display: flex;
+        justify-content: space-between;
+
+        .social{
+            width: 30%;
+            text-align: center;
+            img{
+                margin: 3% 5%;        
+                height: 120px;
+                width: 120px;
+                transition: all 0.8s ease-in-out;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        
+    }
+
+
+
+
+}
